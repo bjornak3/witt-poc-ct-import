@@ -1,0 +1,41 @@
+{
+  "productType": {
+    "typeId": "product-type",
+    "id": "1b4e7db5-51a6-4761-9c00-f466cd3d4c08"
+  },
+  "name": {
+    "en": "Sample T-Shirt"
+  },
+  "slug": {
+    "en": "sample-t-shirt"
+  },
+  "description": {
+    "en": "A comfortable cotton t-shirt in multiple sizes."
+  },
+  "key": "tshirt",
+  "masterVariant": {
+    "sku": "TSHIRT-001",
+    "prices": [
+      {
+        "value": {
+          "currencyCode": "EUR",
+          "centAmount": 1999
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "sku": "TSHIRT-002",
+      "prices": [
+        {
+          "value": {
+            "currencyCode": "EUR",
+            "centAmount": 1999
+          }
+        }
+      ]
+    }
+  ],
+  "publish": true
+}

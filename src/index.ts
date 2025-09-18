@@ -1,14 +1,12 @@
-import  { apiRoot } from './ClientApi';
+import {importProducts} from "./product-import/ProductImport";
 
 function main(): void {
     console.log("Witt POC Import Adapter");
 
     // Retrieve Project information and output the result to the log
-    apiRoot
-        .get()
-        .execute()
-        .then(console.log)
-        .catch(console.error);
+
+    importProducts().then(result => console.log(result));
+
 }
 
 main();
