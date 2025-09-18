@@ -1,4 +1,4 @@
-import {importProducts} from "./product-import/ProductImport";
+import {importProducts} from "./ProductImport";
 
 function main(): void {
     console.log("Witt POC Import Adapter");

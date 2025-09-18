@@ -1,9 +1,9 @@
-import {apiRoot} from '../ClientApi';
+import {apiRoot} from './ClientApi';
 import {ProductDraft} from '@commercetools/platform-sdk';
 import * as fs from 'fs';
 
 const productAsJson = JSON.parse(
-    fs.readFileSync('src/product-import/product.json', 'utf-8')
+    fs.readFileSync('product.json', 'utf-8')
 ) as ProductDraft
 
 export const importProducts = async () => {

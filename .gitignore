@@ -1,6 +1,6 @@
 node_modules/
 dist/
-.env
+product-import/.env
 *.log
 .idea
 
