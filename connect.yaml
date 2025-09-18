@@ -16,13 +16,3 @@ deployAs:
           description: Commercetools client scope
         - key: CTP_REGION
           description: Region of Commercetools project
-inheritAs:
-  configuration:
-    securedConfiguration:
-      - key: GLOBAL_SECURED_CONFIGURATION
-        description: Secured configuration that is applied to all applications
-        required: true
-    standardConfiguration:
-      - key: GLOBAL_STANDARD_CONFIGURATION
-        description: Standard configuration that is applied to all applications
-        required: true
