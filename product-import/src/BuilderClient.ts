@@ -20,7 +20,7 @@ const authMiddlewareOptions: AuthMiddlewareOptions = {
 
 // Configure httpMiddlewareOptions
 const httpMiddlewareOptions: HttpMiddlewareOptions = {
-    host: 'https://api.'+ config.region +'.gcp.commercetools.com'
+    host: 'https://api.'+ config.region +'.commercetools.com'
 };
 
 // Export the ClientBuilder

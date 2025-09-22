@@ -46,3 +46,55 @@ Content-Type: application/json
   ],
   "publish": true
 }
+
+
+####
+POST https://service-recoi9b4tvp32knsmb5lck05.europe-west1.gcp.sandbox.commercetools.app/productImport
+
+
+###
+
+POST https://service-recoi9b4tvp32knsmb5lck05.europe-west1.gcp.sandbox.commercetools.app/productImport
+Content-Type: application/json
+
+{
+  "productType": {
+    "typeId": "product-type",
+    "id": "1b4e7db5-51a6-4761-9c00-f466cd3d4c08"
+  },
+  "name": {
+    "en": "Connector APP Product"
+  },
+  "slug": {
+    "en": "conn-app-tshirt"
+  },
+  "description": {
+    "en": "I was created through the app. "
+  },
+  "key": "conn-app-tshirt",
+  "masterVariant": {
+    "sku": "TSHIRT-001-3",
+    "prices": [
+      {
+        "value": {
+          "currencyCode": "EUR",
+          "centAmount": 1999
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "sku": "TSHIRT-002-4",
+      "prices": [
+        {
+          "value": {
+            "currencyCode": "EUR",
+            "centAmount": 1999
+          }
+        }
+      ]
+    }
+  ],
+  "publish": true
+}
