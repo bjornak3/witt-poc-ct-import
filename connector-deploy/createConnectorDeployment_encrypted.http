@@ -59,7 +59,7 @@ Authorization: Bearer {{bearerToken}}
 Content-Type: application/json
 
 {
-  "version" : 8,
+  "version" : 12,
   "actions" : [ {
     "action" : "redeploy",
     "configurationValues" : [ {
@@ -93,7 +93,7 @@ Content-Type: application/json
 ###
 
 // get the deployment status
-GET https://connect.europe-west1.gcp.commercetools.com/poc-witt-001/deployments/2b874c36-a9ff-4594-86fa-fa809c635101
+GET https://connect.europe-west1.gcp.commercetools.com/poc-witt-001/deployments/key=productImportDeployment
 Authorization: Bearer {{bearerToken}}
 
 
@@ -101,5 +101,12 @@ Authorization: Bearer {{bearerToken}}
 ####
 
 // get deployment logs
-GET https://connect.europe-west1.gcp.commercetools.com/poc-witt-001/deployments/2b874c36-a9ff-4594-86fa-fa809c635101/logs
+GET https://connect.europe-west1.gcp.commercetools.com/poc-witt-001/deployments/key=productImportDeployment/logs
+Authorization: Bearer {{bearerToken}}
+
+
+
+####
+// delete deployment
+DELETE https://connect.europe-west1.gcp.commercetools.com/poc-witt-001/deployments/key=productImportDeployment
 Authorization: Bearer {{bearerToken}}
