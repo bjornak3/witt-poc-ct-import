@@ -40,8 +40,34 @@ Content-Type: application/json
 
 ####
 
-GET https://connect.europe-west1.gcp.commercetools.com/connectors/search
+POST https://connect.europe-west1.gcp.commercetools.com/connectors/drafts/key=productimportconnector
 Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+
+{
+  "action": "setRepository",
+  "url": "https://github.com/bjornak3/witt-poc-ct-import.git",
+  "tag": "1.1.0"
+}
+
+
+####
+//check status of connector
+
+POST https://connect.europe-west1.gcp.commercetools.com/connectors/drafts/key=productimportconnector
+Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+
+{
+  "version": 5,
+  "actions": [
+    {
+      "action": "updatePreviewable"
+    }
+  ]
+}
+
+
 
 
 ####
