@@ -1,0 +1,68 @@
+# curl -X POST
+#  https://auth.europe-west1.gcp.commercetools.com/oauth/token
+#  -H "Content-Type: application/x-www-form-urlencoded"
+#  -u "<clientId>:<clientSecret>"
+#  -d "grant_type=client_credentials&scope=<scope>"
+POST https://auth.europe-west1.gcp.commercetools.com/oauth/token
+Authorization: Basic 0h3yIrifAM3OUJAFGmjRhgo- qBGXStmjQux_PEq6VcgbWASjiBg7xDuy
+Content-Type: application/x-www-form-urlencoded
+
+grant_type = client_credentials &
+scope = manage_project:poc-witt-001
+
+> {% client.global.set("bearerToken", response.body.access_token); %}
+
+###
+
+
+// create the connectorStaged
+POST https://connect.europe-west1.gcp.commercetools.com/connectors/drafts
+Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+
+{
+  "key": "productimportconnector",
+  "name": "ProductImportConnector",
+  "description": "An example connector",
+  "creator": {
+    "title": "",
+    "name": "Bjorna Kalaja",
+    "email": "bjke@foryoundyourcustomers.com",
+    "company": "foryoundyourcustomers",
+    "noOfDevelopers": 10
+  },
+  "repository": {
+    "url": "https://github.com/bjornak3/witt-poc-ct-import.git",
+    "tag": "1.0.0"
+  },
+  "supportedRegions" : ["europe-west1.gcp"]
+}
+
+####
+
+GET https://connect.europe-west1.gcp.commercetools.com/connectors/search
+Authorization: Bearer {{bearerToken}}
+
+
+####
+1fc0d25b-c9f9-4a61-a975-80017c3b9a36
+
+####
+
+// publish connector
+
+POST https://connect.europe-west1.gcp.commercetools.com/connectors/drafts/key=productimportconnector
+Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+
+{
+  "version": 5,
+  "actions": [
+    {
+      "action": "publish",
+      "certification": false
+    }
+  ]
+}
+
+

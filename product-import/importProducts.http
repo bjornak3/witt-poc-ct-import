@@ -1,0 +1,48 @@
+POST http://localhost:3000/productImport
+
+######
+
+POST http://localhost:3000/productImport
+Content-Type: application/json
+
+{
+  "productType": {
+    "typeId": "product-type",
+    "id": "1b4e7db5-51a6-4761-9c00-f466cd3d4c08"
+  },
+  "name": {
+    "en": "Sample T-Shirt 2"
+  },
+  "slug": {
+    "en": "sample-t-shirt-2"
+  },
+  "description": {
+    "en": "A comfortable cotton t-shirt in multiple sizes."
+  },
+  "key": "tshirt-2",
+  "masterVariant": {
+    "sku": "TSHIRT-001-1",
+    "prices": [
+      {
+        "value": {
+          "currencyCode": "EUR",
+          "centAmount": 1999
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "sku": "TSHIRT-002-2",
+      "prices": [
+        {
+          "value": {
+            "currencyCode": "EUR",
+            "centAmount": 1999
+          }
+        }
+      ]
+    }
+  ],
+  "publish": true
+}
