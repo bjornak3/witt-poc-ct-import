@@ -33,7 +33,7 @@ Content-Type: application/json
   },
   "repository": {
     "url": "https://github.com/bjornak3/witt-poc-ct-import.git",
-    "tag": "1.1.1"
+    "tag": "1.1.2"
   },
   "supportedRegions" : ["europe-west1.gcp"]
 }
@@ -45,12 +45,12 @@ Authorization: Bearer {{bearerToken}}
 Content-Type: application/json
 
 {
-  "version": 10,
+  "version": 17,
   "actions": [
     {
       "action": "setRepository",
       "url": "https://github.com/bjornak3/witt-poc-ct-import.git",
-      "tag": "1.1.1"
+      "tag": "1.1.2"
     }
   ]
 }
@@ -64,7 +64,7 @@ Authorization: Bearer {{bearerToken}}
 Content-Type: application/json
 
 {
-  "version": 11,
+  "version": 18,
   "actions": [
     {
       "action": "updatePreviewable"
@@ -73,10 +73,6 @@ Content-Type: application/json
 }
 
 
-
-
-####
-1fc0d25b-c9f9-4a61-a975-80017c3b9a36
 
 ####
 
@@ -87,7 +83,7 @@ Authorization: Bearer {{bearerToken}}
 Content-Type: application/json
 
 {
-  "version": 9,
+  "version": 19,
   "actions": [
     {
       "action": "publish",

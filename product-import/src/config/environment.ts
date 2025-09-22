@@ -22,11 +22,11 @@ function getRequiredEnvVar(name: string): string {
 }
 
 export const config: Config = {
-    projectKey: getRequiredEnvVar('COMMERCETOOLS_PROJECT_KEY'),
-    clientId: getRequiredEnvVar('COMMERCETOOLS_CLIENT_ID'),
-    clientSecret: getRequiredEnvVar('COMMERCETOOLS_CLIENT_SECRET'),
-    apiUrl: getRequiredEnvVar('COMMERCETOOLS_API_URL'),
-    authUrl: getRequiredEnvVar('COMMERCETOOLS_AUTH_URL'),
-    scopes: (process.env.COMMERCETOOLS_SCOPES || '').split(','),
-    region: getRequiredEnvVar('COMMERCETOOLS_REGION'),
+    projectKey: getRequiredEnvVar('CTP_PROJECT_KEY'),
+    clientId: getRequiredEnvVar('CTP_CLIENT_ID'),
+    clientSecret: getRequiredEnvVar('CTP_CLIENT_SECRET'),
+    apiUrl: getRequiredEnvVar('CTP_API_URL'),
+    authUrl: getRequiredEnvVar('CTP_AUTH_URL'),
+    scopes: (process.env.CTP_SCOPE || '').split(','),
+    region: getRequiredEnvVar('CTP_REGION'),
 };

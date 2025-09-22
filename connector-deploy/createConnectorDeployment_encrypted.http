@@ -45,6 +45,14 @@ Content-Type: application/json
         {
           "key": "CTP_REGION",
           "value": "replaceThis"
+        },
+        {
+          "key": "CTP_API_URL",
+          "value": "https://api.europe-west1.gcp.commercetools.com"
+        },
+        {
+          "key": "CTP_AUTH_URL",
+          "value": "https://auth.europe-west1.gcp.commercetools.com"
         }
       ]
     }
@@ -84,6 +92,14 @@ Content-Type: application/json
         {
           "key": "CTP_REGION",
           "value": "replaceThis"
+        },
+        {
+          "key": "CTP_API_URL",
+          "value": "https://api.europe-west1.gcp.commercetools.com"
+        },
+        {
+          "key": "CTP_AUTH_URL",
+          "value": "https://auth.europe-west1.gcp.commercetools.com"
         }
       ]
     } ]
