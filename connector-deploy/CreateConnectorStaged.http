@@ -33,7 +33,7 @@ Content-Type: application/json
   },
   "repository": {
     "url": "https://github.com/bjornak3/witt-poc-ct-import.git",
-    "tag": "1.0.0"
+    "tag": "1.1.1"
   },
   "supportedRegions" : ["europe-west1.gcp"]
 }
@@ -45,9 +45,14 @@ Authorization: Bearer {{bearerToken}}
 Content-Type: application/json
 
 {
-  "action": "setRepository",
-  "url": "https://github.com/bjornak3/witt-poc-ct-import.git",
-  "tag": "1.1.0"
+  "version": 10,
+  "actions": [
+    {
+      "action": "setRepository",
+      "url": "https://github.com/bjornak3/witt-poc-ct-import.git",
+      "tag": "1.1.1"
+    }
+  ]
 }
 
 
@@ -59,7 +64,7 @@ Authorization: Bearer {{bearerToken}}
 Content-Type: application/json
 
 {
-  "version": 5,
+  "version": 11,
   "actions": [
     {
       "action": "updatePreviewable"
@@ -82,7 +87,7 @@ Authorization: Bearer {{bearerToken}}
 Content-Type: application/json
 
 {
-  "version": 5,
+  "version": 9,
   "actions": [
     {
       "action": "publish",
@@ -91,4 +96,12 @@ Content-Type: application/json
   ]
 }
 
+
+
+######
+
+// get published connector
+
+GET https://connect.europe-west1.gcp.commercetools.com/connectors/key=productimportconnector
+Authorization: Bearer {{bearerToken}}
 
