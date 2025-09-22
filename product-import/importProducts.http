@@ -49,12 +49,12 @@ Content-Type: application/json
 
 
 ####
-POST https://service-recoi9b4tvp32knsmb5lck05.europe-west1.gcp.sandbox.commercetools.app/productImport
+POST https://service-j2h831kz8pjqjfekatjuwigx.europe-west1.gcp.3.sandbox.commercetools.app/productImport
 
 
 ###
 
-POST https://service-recoi9b4tvp32knsmb5lck05.europe-west1.gcp.sandbox.commercetools.app/productImport
+POST https://service-j2h831kz8pjqjfekatjuwigx.europe-west1.gcp.3.sandbox.commercetools.app/productImport
 Content-Type: application/json
 
 {

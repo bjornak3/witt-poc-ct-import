@@ -10,7 +10,7 @@ import {
 
 // Configure authMiddlewareOptions
 const authMiddlewareOptions: AuthMiddlewareOptions = {
-    host: 'https://auth.' + config.region +'.gcp.commercetools.com',
+    host: 'https://auth.' + config.region +'.commercetools.com',
     projectKey: config.projectKey,
     credentials: {
         clientId: config.clientId,
