@@ -10,7 +10,7 @@ import {
 
 // Configure authMiddlewareOptions
 const authMiddlewareOptions: AuthMiddlewareOptions = {
-    host: 'https://auth.' + config.region +'.commercetools.com',
+    host: config.authUrl,
     projectKey: config.projectKey,
     credentials: {
         clientId: config.clientId,
@@ -20,7 +20,7 @@ const authMiddlewareOptions: AuthMiddlewareOptions = {
 
 // Configure httpMiddlewareOptions
 const httpMiddlewareOptions: HttpMiddlewareOptions = {
-    host: 'https://api.'+ config.region +'.commercetools.com'
+    host: config.apiUrl,
 };
 
 // Export the ClientBuilder

@@ -9,7 +9,7 @@ scope = manage_project:poc-witt-001
 
 ###
 
-
+//create deployment
 POST https://connect.europe-west1.gcp.commercetools.com/poc-witt-001/deployments
 Authorization: Bearer {{bearerToken}}
 Content-Type: application/json
@@ -18,7 +18,7 @@ Content-Type: application/json
   "key": "productImportDeployment",
   "connector": {
     "id": "1fc0d25b-c9f9-4a61-a975-80017c3b9a36",
-    "version": 6,
+    "version": 31,
     "staged": false
   },
   "region": "europe-west1.gcp",
@@ -45,15 +45,85 @@ Content-Type: application/json
         {
           "key": "CTP_REGION",
           "value": "europe-west1.gcp"
+        },
+        {
+          "key": "CTP_API_URL",
+          "value": "https://api.europe-west1.gcp.commercetools.com"
+        },
+        {
+          "key": "CTP_AUTH_URL",
+          "value": "https://auth.europe-west1.gcp.commercetools.com"
         }
       ]
     }
   ]
 }
 
+####
+
+//redeploy
+
+POST https://connect.europe-west1.gcp.commercetools.com/poc-witt-001/deployments/key=productImportDeployment
+Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+
+{
+  "version" : 8,
+  "actions" : [ {
+    "action" : "redeploy",
+    "configurationValues" : [ {
+      "applicationName" : "product-import",
+      "securedConfiguration": [
+        {
+          "key": "CTP_CLIENT_ID",
+          "value": "0h3yIrifAM3OUJAFGmjRhgo-"
+        },
+        {
+          "key": "CTP_CLIENT_SECRET",
+          "value": "qBGXStmjQux_PEq6VcgbWASjiBg7xDuy"
+        },
+        {
+          "key": "CTP_SCOPE",
+          "value": "manage_project:poc-witt-001"
+        },
+        {
+          "key": "CTP_PROJECT_KEY",
+          "value": "poc-witt-001"
+        },
+        {
+          "key": "CTP_REGION",
+          "value": "europe-west1.gcp"
+        },
+        {
+          "key": "CTP_API_URL",
+          "value": "https://api.europe-west1.gcp.commercetools.com"
+        },
+        {
+          "key": "CTP_AUTH_URL",
+          "value": "https://auth.europe-west1.gcp.commercetools.com"
+        }
+      ]
+    } ]
+  } ]
+}
 
 ###
 
 // get the deployment status
-GET https://connect.europe-west1.gcp.commercetools.com/poc-witt-001/deployments/2b874c36-a9ff-4594-86fa-fa809c635101
+GET https://connect.europe-west1.gcp.commercetools.com/poc-witt-001/deployments/key=productImportDeployment
+Authorization: Bearer {{bearerToken}}
+
+
+
+####
+
+// get deployment logs
+GET https://connect.europe-west1.gcp.commercetools.com/poc-witt-001/deployments/key=productImportDeployment/logs
+Authorization: Bearer {{bearerToken}}
+
+
+
+####
+// delete deployment
+DELETE https://connect.europe-west1.gcp.commercetools.com/poc-witt-001/deployments/key=productImportDeployment
 Authorization: Bearer {{bearerToken}}
