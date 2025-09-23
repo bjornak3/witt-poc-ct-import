@@ -92,22 +92,23 @@ If the endpoint is called without a body, then a default product will be importe
 ### Deployment flow
 The following graph visualizes the process of deploying a new and an existing application in Commercetools. 
 
-``` mermaid
-    A[Push code to GitHub] --> B[Tag and create a release based on the tag]
+```mermaid
+graph TD;
+    A[Push code to GitHub] --> B[Tag and create a release based on the tag];
 
-    B --> C{ConnectorStaged exists?}
-    C -- Yes --> D[Update the connectorStaged]
-    C -- No --> E[Create the connectorStaged]
+    B --> C{ConnectorStaged exists?};
+    C -- Yes --> D[Update the connectorStaged];
+    C -- No --> E[Create the connectorStaged];
 
-    D --> F[Request preview of connector ] --> K[Request Publishing]
-    E --> F[Request preview of connector ] 
+    D --> F[Request preview of connector ] --> K[Request Publishing];
+    E --> F[Request preview of connector ] ;
 
-    K --> G{Deployment exists?}
-    G -- Yes --> H[Update the deployment]
-    G -- No --> I[Create the deployment]
+    K --> G{Deployment exists?};
+    G -- Yes --> H[Update the deployment];
+    G -- No --> I[Create the deployment];
 
-    H --> J[Deploy the application]
-    I --> J[Deploy the application]
+    H --> J[Deploy the application];
+    I --> J[Deploy the application];
 ```
 -----
 
